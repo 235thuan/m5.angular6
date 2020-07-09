@@ -1,15 +1,15 @@
-<h2 class="text-center">
-  <label class=" btn btn-primary ">Todo App  <i class=" fa fa-gear fa-spin"></i></label>
-</h2>
-<div class="col-md-6 offset-md-3 ">
-  <div>
-    <input class="form-control btn btn-outline-primary" type="text" [formControl]="userInput" (change)="onChange()">
+<div class="col-md-6 offset-md-3">
+  <h2 class="btn btn-dark col-md-6 offset-md-3">
+    <label class="fa-2x">Todo App <i class=" fa fa-gear fa-spin"></i></label>
+  </h2>
+  <div class="btn btn-light col-md-6 offset-md-3">
+    <input class="form-control" type="text" [formControl]="userInput" (change)="onChange()">
   </div>
-  <ul>
+  <ul class="btn btn-light col-md-6 offset-md-3">
     <li (click)="toggleTodo(i)"
         [class.complete]="todo.complete"
         *ngFor="let todo of todos; index as i">
-      <label class="btn btn-danger">{{todo.content}}</label>
+      <label>{{todo.content}}</label>
     </li>
   </ul>
 </div>
